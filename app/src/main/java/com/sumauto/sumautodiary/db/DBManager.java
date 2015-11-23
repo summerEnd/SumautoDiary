@@ -22,7 +22,7 @@ public class DBManager extends SQLiteOpenHelper
 {
 
     private static final String DB_NAME          = "diary.db";
-    private static final int    DATABASE_VERSION = 4;
+    private static final int    DATABASE_VERSION = 54;
 
     public DBManager(Context context)
     {
@@ -39,7 +39,13 @@ public class DBManager extends SQLiteOpenHelper
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        updateTable(db,Diary.class);
+        db.execSQL("DROP TABLE ");
+        updateTableTotally(db, Diary.class);
+    }
+
+    private void updateTableTotally(SQLiteDatabase db, Class entity){
+        final String table = entity.getSimpleName();
+        db.execSQL("DROP TABLE IF EXISTS "+table);
     }
 
     private void updateTable(SQLiteDatabase db, Class entity)

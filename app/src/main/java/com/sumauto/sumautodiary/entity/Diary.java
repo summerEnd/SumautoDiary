@@ -42,4 +42,16 @@ public class Diary {
      */
     @DBColumn(value = DBColumn.text)
     private String mood;
+
+    /**
+     * 密码
+     */
+    @DBColumn(value = DBColumn.text)
+    private String secret;
+
+    /**
+     * 密码提示
+     */
+    @DBColumn(value = DBColumn.text)
+    private String secret_tips;
 }

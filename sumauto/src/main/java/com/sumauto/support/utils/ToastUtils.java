@@ -14,7 +14,7 @@ public class ToastUtils
 
     public static void toast_debug(Context context, Object obj)
     {
-        if (SumautoConfig.DEBUG)
+        if (SumautoConfig.isDebug())
         {
             toast(context, String.valueOf(obj));
         }

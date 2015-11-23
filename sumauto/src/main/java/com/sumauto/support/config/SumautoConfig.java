@@ -6,7 +6,7 @@ package com.sumauto.support.config;
  */
 public class SumautoConfig
 {
-    public static boolean DEBUG;
+    private static boolean DEBUG;
 
     public static boolean isDebug()
     {

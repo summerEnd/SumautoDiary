@@ -3,7 +3,6 @@ package com.sumauto.sumautodiary;
 import android.app.Application;
 
 import com.sumauto.support.*;
-import com.sumauto.support.BuildConfig;
 
 /**
  * Created by Lincoln on 2015/11/19.

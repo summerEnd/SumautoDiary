@@ -21,7 +21,7 @@ public class SLog
         {
             tag = TAG;
         }
-        if (SumautoConfig.DEBUG)
+        if (SumautoConfig.isDebug())
         {
             Log.d(tag, String.valueOf(value));
         }
@@ -34,7 +34,7 @@ public class SLog
 
     public static void error(String tag, String msg)
     {
-        if (SumautoConfig.DEBUG)
+        if (SumautoConfig.isDebug())
         {
             if (TextUtils.isEmpty(tag))
             {

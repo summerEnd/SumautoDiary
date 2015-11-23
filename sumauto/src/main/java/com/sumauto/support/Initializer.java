@@ -16,7 +16,7 @@ public class Initializer
     public static void init(Context context,boolean showDebugLog)
     {
         ImageLoader.getInstance().init(buildConfiguration(context));
-        SumautoConfig.DEBUG=showDebugLog;
+        SumautoConfig.init(showDebugLog);
     }
 
     private static ImageLoaderConfiguration buildConfiguration(Context context){
