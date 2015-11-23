@@ -2,13 +2,20 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.android.databinding'
 
 def versionMajor = 1
-def versionMinor = 4
+def versionMinor = 0
 def versionPatch = 0
 def versionBuild = 0
 android {
+    signingConfigs {
+        config {
+            keyAlias 'diary'
+            keyPassword 'diary2015'
+            storePassword 'sumauto2015'
+            storeFile file('diary.jks')
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
         applicationId "com.sumauto.sumautodiary"
         minSdkVersion 15
@@ -16,11 +23,14 @@ android {
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 }
@@ -31,4 +41,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile project(':sumauto')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('src/main/libs/umeng-update-v2.6.0.1.jar')
+    compile files('src/main/libs/umeng-onlineconfig_v1.0.0.jar')
 }

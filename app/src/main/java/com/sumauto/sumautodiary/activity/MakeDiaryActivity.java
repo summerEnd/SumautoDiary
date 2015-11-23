@@ -1,19 +1,15 @@
 package com.sumauto.sumautodiary.activity;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
 
 import com.sumauto.sumautodiary.R;
 import com.sumauto.sumautodiary.db.DBManager;
 import com.sumauto.sumautodiary.utils.ViewUtils;
-import com.sumauto.support.utils.SLog;
+
+import org.json.JSONObject;
 
 public class MakeDiaryActivity extends BaseActivity {
 
@@ -43,7 +39,8 @@ public class MakeDiaryActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId()==R.id.menu_item_done){
-            if (!"title".equals(ViewUtils.getString(input_title))) {
+            String string = ViewUtils.getString(input_title);
+            if (!"title".equals(string)) {
                 input_title.setErrorEnabled(true);
                 input_title.setError("must be title");
             }else{
@@ -62,4 +59,5 @@ public class MakeDiaryActivity extends BaseActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

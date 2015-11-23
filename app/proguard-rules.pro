@@ -16,3 +16,29 @@
 #   public *;
 #}
 #-keep class * extends java.lang.annotation.Annotation { *; }
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * {
+        public (org.json.JSONObject);
+}
+
+-keep class com.umeng.onlineconfig.OnlineConfigAgent {
+        public <fields>;
+        public <methods>;
+
+}
+
+-keep class com.umeng.onlineconfig.OnlineConfigLog {
+        public <fields>;
+        public <methods>;
+}
+
+-keep interface com.umeng.onlineconfig.UmengOnlineConfigureListener {
+        public <methods>;
+}

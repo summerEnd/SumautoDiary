@@ -17,6 +17,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({METHOD, PARAMETER, FIELD})
 public @interface DBColumn
 {
-    String text="TEXT";
+    String TEXT ="TEXT";
+    String NOT_COLUMN="not column";
     String value();
 }
