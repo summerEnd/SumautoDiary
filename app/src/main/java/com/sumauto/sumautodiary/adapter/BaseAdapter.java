@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,10 +22,8 @@ public abstract class BaseAdapter<ET,VH extends BaseHolder<ET>> extends Recycler
         this.data = data;
     }
 
-
-
     public BaseAdapter(@NonNull Context context) {
-        this.context = context;
+        this(context,new ArrayList<ET>());
     }
 
     public Context getContext() {
@@ -39,7 +38,7 @@ public abstract class BaseAdapter<ET,VH extends BaseHolder<ET>> extends Recycler
         return inflater;
     }
 
-    public List<ET> getData() {
+    public List<ET> getDataList() {
         return data;
     }
 
@@ -67,6 +66,6 @@ public abstract class BaseAdapter<ET,VH extends BaseHolder<ET>> extends Recycler
     @Override
     public void onBindViewHolder(VH holder, int position)
     {
-        holder.setData(getData().get(position));
+        holder.setData(getDataList().get(position));
     }
 }

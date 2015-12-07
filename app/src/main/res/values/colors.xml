@@ -6,5 +6,6 @@
 
     <color name="colorAccent_pressed">#DF3071</color>
     <color name="colorAccent_disabled">#55FF4081</color>
+    <drawable name="windowBackground">#f5f5f5</drawable>
 
 </resources>
