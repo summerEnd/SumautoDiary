@@ -7,4 +7,5 @@ package com.sumauto.sumautodiary.utils;
 public class DateUtils
 {
     public static final String FULL_DATE_FORMATTER = "yyyy-MM-dd hh:mm:ss";
+
 }

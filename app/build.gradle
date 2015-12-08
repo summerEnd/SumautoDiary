@@ -45,4 +45,5 @@ dependencies {
     compile files('src/main/libs/umeng-update-v2.6.0.1.jar')
     compile files('src/main/libs/umeng-onlineconfig_v1.0.0.jar')
     compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
 }

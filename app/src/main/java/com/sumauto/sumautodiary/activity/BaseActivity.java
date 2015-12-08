@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 import com.sumauto.sumautodiary.R;
 import com.umeng.analytics.MobclickAgent;
 
-/**
- * Created by Lincoln on 2015/11/19.
- */
 public class BaseActivity extends AppCompatActivity {
     protected String TAG;
     private Toolbar toolbar;

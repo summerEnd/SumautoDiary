@@ -10,7 +10,6 @@ import com.sumauto.sumautodiary.entity.Configs;
 import com.sumauto.support.*;
 import com.sumauto.support.utils.JsonUtil;
 import com.sumauto.support.utils.SLog;
-import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.onlineconfig.OnlineConfigAgent;
 import com.umeng.onlineconfig.UmengOnlineConfigureListener;
 

@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SearchViewCompat;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,13 +15,15 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.sumauto.sumautodiary.DiaryApp;
 import com.sumauto.sumautodiary.R;
+import com.sumauto.sumautodiary.adapter.SampleAdapter;
 import com.sumauto.sumautodiary.config.AppConfigs;
+import com.sumauto.sumautodiary.utils.ViewUtils;
+import com.sumauto.support.android.recyclerview.PaddingItemDecoration;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,7 +36,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), MakeDiaryActivity.class));
-                startActivity(new Intent(view.getContext(), TestActivity.class));
+                //startActivity(new Intent(view.getContext(), TestActivity.class));
             }
         });
 
@@ -45,12 +48,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         showNotice();
-        findViewById(R.id.nav_view).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MakeDiaryActivity.class));
-            }
-        });
+
+        RecyclerView recyclerView= (RecyclerView) findViewById(R.id.recyclerView);
+        ViewUtils.initLinearRecyclerView(recyclerView);
+        recyclerView.setAdapter(new SampleAdapter(this, 20));
+        recyclerView.addItemDecoration(new PaddingItemDecoration(20,20,20,20));
     }
 
     private void showNotice() {
