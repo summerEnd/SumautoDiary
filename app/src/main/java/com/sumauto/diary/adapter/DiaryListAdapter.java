@@ -5,21 +5,15 @@ import android.database.Cursor;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseBooleanArray;
-import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.sumauto.diary.R;
 import com.sumauto.diary.databinding.ListItemDiaryBinding;
 import com.sumauto.diary.db.DBManager;
 import com.sumauto.diary.entity.Diary;
-import com.sumauto.support.utils.SLog;
-
-import java.util.List;
 
 
 public class DiaryListAdapter extends CursorAdapter{
