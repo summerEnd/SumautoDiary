@@ -1,4 +1,4 @@
-package com.sumauto.sumautodiary;
+package com.sumauto.diary;
 
 import org.junit.Test;
 

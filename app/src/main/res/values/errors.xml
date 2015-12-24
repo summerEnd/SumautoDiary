@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_content">内容不能为空</string>
+    <string name="empty_title">标题不能为空</string>
+</resources>
