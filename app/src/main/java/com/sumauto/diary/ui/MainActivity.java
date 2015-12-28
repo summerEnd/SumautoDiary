@@ -1,4 +1,4 @@
-package com.sumauto.diary.activity;
+package com.sumauto.diary.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,8 +19,7 @@ import android.view.MenuItem;
 import com.sumauto.diary.DiaryApp;
 import com.sumauto.diary.R;
 import com.sumauto.diary.adapter.DiaryListAdapter;
-import com.sumauto.diary.config.AppConfigs;
-import com.sumauto.diary.utils.ViewUtils;
+import com.sumauto.diary.data.entity.AppConfigs;
 import com.sumauto.support.android.recyclerview.PaddingItemDecoration;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {

@@ -1,10 +1,10 @@
-package com.sumauto.diary.adapter;
+package com.sumauto.diary.adapter.base;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.ViewGroup;
 
-import com.sumauto.diary.entity.Dummy;
+import com.sumauto.diary.data.entity.Dummy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,6 @@ import java.util.List;
  * 示范
  */
 public class SampleAdapter extends BaseAdapter<Dummy,BaseHolder<Dummy>> {
-
     private static List<Dummy> createTempData(int count){
         ArrayList<Dummy> dataList=new ArrayList<>();
         for (int i = 0; i < count; i++) {

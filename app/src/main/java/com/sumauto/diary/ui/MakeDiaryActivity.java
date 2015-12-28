@@ -1,4 +1,4 @@
-package com.sumauto.diary.activity;
+package com.sumauto.diary.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.sumauto.diary.R;
-import com.sumauto.diary.db.DBManager;
-import com.sumauto.diary.entity.Diary;
+import com.sumauto.diary.data.db.DBManager;
+import com.sumauto.diary.data.entity.Diary;
 import com.sumauto.diary.utils.DateUtils;
 import com.sumauto.diary.utils.ViewUtils;
 

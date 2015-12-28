@@ -11,12 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.sumauto.diary.R;
+import com.sumauto.diary.adapter.base.CursorAdapter;
 import com.sumauto.diary.databinding.ListItemDiaryBinding;
-import com.sumauto.diary.db.DBManager;
-import com.sumauto.diary.entity.Diary;
+import com.sumauto.diary.data.db.DBManager;
+import com.sumauto.diary.data.entity.Diary;
 
 
-public class DiaryListAdapter extends CursorAdapter{
+public class DiaryListAdapter extends CursorAdapter {
     public static final boolean DEFAULT = true;
     LayoutInflater inflater;
     DBManager dbManager;

@@ -1,4 +1,4 @@
-package com.sumauto.diary.adapter;
+package com.sumauto.diary.adapter.base;
 
 import android.database.Cursor;
 import android.widget.Filter;

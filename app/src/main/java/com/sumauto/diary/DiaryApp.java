@@ -3,9 +3,9 @@ package com.sumauto.diary;
 import android.app.Application;
 import android.database.Cursor;
 
-import com.sumauto.diary.config.AppConfigs;
-import com.sumauto.diary.db.DBManager;
-import com.sumauto.diary.entity.Configs;
+import com.sumauto.diary.data.entity.AppConfigs;
+import com.sumauto.diary.data.db.DBManager;
+import com.sumauto.diary.data.entity.Configs;
 import com.sumauto.support.*;
 import com.sumauto.support.utils.JsonUtil;
 import com.umeng.onlineconfig.OnlineConfigAgent;

@@ -1,4 +1,4 @@
-package com.sumauto.diary.http;
+package com.sumauto.diary.data.http;
 
 import android.support.annotation.NonNull;
 
@@ -14,7 +14,6 @@ public class HttpTask extends JsonHttpResponseHandler {
     private final String TAG = getClass().getSimpleName();
     @NonNull
     HttpParams requestParams;
-
 
     public HttpTask(@NonNull HttpParams requestParams) {
         this.requestParams = requestParams;

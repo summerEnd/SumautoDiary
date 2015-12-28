@@ -2,7 +2,7 @@ package com.sumauto.diary;
 
 import android.test.ActivityUnitTestCase;
 
-import com.sumauto.diary.activity.MainActivity;
+import com.sumauto.diary.ui.MainActivity;
 
 /**
  * Created by Lincoln on 2015/12/8.

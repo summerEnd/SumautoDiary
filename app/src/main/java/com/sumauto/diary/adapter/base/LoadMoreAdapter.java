@@ -1,4 +1,4 @@
-package com.sumauto.diary.adapter;
+package com.sumauto.diary.adapter.base;
 
 import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;

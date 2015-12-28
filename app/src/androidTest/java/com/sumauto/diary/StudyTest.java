@@ -2,10 +2,10 @@ package com.sumauto.diary;
 
 import android.test.AndroidTestCase;
 
-import com.sumauto.diary.http.HttpInterface;
-import com.sumauto.diary.http.HttpManager;
-import com.sumauto.diary.http.HttpParams;
-import com.sumauto.diary.http.HttpTask;
+import com.sumauto.diary.data.http.HttpInterface;
+import com.sumauto.diary.data.http.HttpManager;
+import com.sumauto.diary.data.http.HttpParams;
+import com.sumauto.diary.data.http.HttpTask;
 import com.sumauto.support.utils.SLog;
 
 import org.json.JSONObject;

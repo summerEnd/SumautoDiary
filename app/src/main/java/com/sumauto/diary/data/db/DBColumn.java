@@ -1,4 +1,4 @@
-package com.sumauto.diary.db;
+package com.sumauto.diary.data.db;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

@@ -1,4 +1,4 @@
-package com.sumauto.diary.activity;
+package com.sumauto.diary.ui;
 
 import android.app.Activity;
 import android.graphics.PorterDuff;

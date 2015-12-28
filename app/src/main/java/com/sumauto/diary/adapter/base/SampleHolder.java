@@ -1,10 +1,10 @@
-package com.sumauto.diary.adapter;
+package com.sumauto.diary.adapter.base;
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.sumauto.diary.entity.Dummy;
+import com.sumauto.diary.data.entity.Dummy;
 import com.sumauto.support.utils.ToastUtils;
 
 /**

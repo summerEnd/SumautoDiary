@@ -1,4 +1,4 @@
-package com.sumauto.diary.entity;
+package com.sumauto.diary.data.entity;
 
 import android.databinding.BaseObservable;
 

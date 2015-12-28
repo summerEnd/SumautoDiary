@@ -1,4 +1,4 @@
-package com.sumauto.diary.entity;
+package com.sumauto.diary.data.entity;
 
 /**
  * Created by Lincoln on 2015/12/8.

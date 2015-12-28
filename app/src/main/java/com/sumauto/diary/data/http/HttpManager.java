@@ -1,4 +1,4 @@
-package com.sumauto.diary.http;
+package com.sumauto.diary.data.http;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.SyncHttpClient;

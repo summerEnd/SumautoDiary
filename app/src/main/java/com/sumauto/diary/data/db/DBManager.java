@@ -1,4 +1,4 @@
-package com.sumauto.diary.db;
+package com.sumauto.diary.data.db;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.sumauto.diary.entity.Configs;
-import com.sumauto.diary.entity.Diary;
+import com.sumauto.diary.data.entity.Configs;
+import com.sumauto.diary.data.entity.Diary;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
