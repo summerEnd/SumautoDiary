@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import com.sumauto.diary.DiaryApp;
 import com.sumauto.diary.R;
 import com.sumauto.diary.adapter.DiaryListAdapter;
-import com.sumauto.diary.data.entity.AppConfigs;
+import com.sumauto.diary.data.entity.Configs;
 import com.sumauto.support.android.recyclerview.PaddingItemDecoration;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     private void showNotice() {
         DiaryApp app = DiaryApp.getInstance();
-        AppConfigs appConfigs = app.getAppConfigs();
+        Configs appConfigs = app.getAppConfigs();
         String notice = appConfigs.getNotice();
         if (!TextUtils.isEmpty(notice) && "1".equals(appConfigs.getShow_notice())) {
             new AlertDialog.Builder(this).setMessage(notice).show();

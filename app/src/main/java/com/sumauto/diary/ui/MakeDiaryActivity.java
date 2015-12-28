@@ -71,7 +71,7 @@ public class MakeDiaryActivity extends BaseActivity {
                 diary.setTitle(title);
                 diary.setContent(content);
                 DBManager dbManager=new DBManager(MakeDiaryActivity.this);
-                dbManager.insert(diary);
+                dbManager.save(diary);
                 finish();
                 return true;
             }

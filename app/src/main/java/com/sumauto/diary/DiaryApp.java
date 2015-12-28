@@ -3,9 +3,8 @@ package com.sumauto.diary;
 import android.app.Application;
 import android.database.Cursor;
 
-import com.sumauto.diary.data.entity.AppConfigs;
-import com.sumauto.diary.data.db.DBManager;
 import com.sumauto.diary.data.entity.Configs;
+import com.sumauto.diary.data.db.DBManager;
 import com.sumauto.support.*;
 import com.sumauto.support.utils.JsonUtil;
 import com.umeng.onlineconfig.OnlineConfigAgent;
@@ -19,7 +18,7 @@ import org.json.JSONObject;
  */
 public class DiaryApp extends Application implements UmengOnlineConfigureListener {
     private static DiaryApp INSTANCE;
-    private AppConfigs configs = new AppConfigs();
+    private Configs configs = new Configs();
 
     public static DiaryApp getInstance() {
         return INSTANCE;
@@ -40,7 +39,7 @@ public class DiaryApp extends Application implements UmengOnlineConfigureListene
         refreshConfigs();
     }
 
-    public AppConfigs getAppConfigs() {
+    public Configs getAppConfigs() {
         return configs;
     }
 
@@ -48,17 +47,17 @@ public class DiaryApp extends Application implements UmengOnlineConfigureListene
     @Override
     public void onDataReceived(JSONObject jsonObject) {
         DBManager dbManager = new DBManager(this);
-        AppConfigs appConfigs = JsonUtil.get(jsonObject, AppConfigs.class);
-        dbManager.insert(appConfigs);
+        Configs appConfigs = JsonUtil.get(jsonObject, Configs.class);
+        dbManager.save(appConfigs);
         this.configs = appConfigs;
 
     }
 
     private void refreshConfigs() {
         DBManager dbManager = new DBManager(this);
-        Cursor cursor = dbManager.queryAll(Configs.class.getSimpleName().toLowerCase());
+        Cursor cursor = dbManager.query(Configs.class.getSimpleName().toLowerCase());
         cursor.moveToNext();
-        dbManager.getObject(cursor, configs);
+        dbManager.get(cursor, configs);
         cursor.close();
     }
 }

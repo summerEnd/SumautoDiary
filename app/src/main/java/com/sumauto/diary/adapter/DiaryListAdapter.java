@@ -30,14 +30,14 @@ public class DiaryListAdapter extends CursorAdapter {
 
     @Override
     protected Cursor onCreateCursor() {
-        return new DBManager(context).queryAll(Diary.class.getSimpleName());
+        return new DBManager(context).query(Diary.class.getSimpleName());
     }
 
     @Override
     public void bindView(RecyclerView.ViewHolder holder, Cursor cursor) {
         DiaryHolder diaryHolder= (DiaryHolder) holder;
         Diary diary=new Diary();
-        dbManager.getObject(cursor, diary);
+        dbManager.get(cursor, diary);
         ListItemDiaryBinding binding= DataBindingUtil.bind(diaryHolder.itemView);
         diaryHolder.iv_image.setVisibility(status.get(holder.getAdapterPosition(), DEFAULT)?View.GONE:View.VISIBLE);
 
