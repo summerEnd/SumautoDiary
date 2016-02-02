@@ -12,6 +12,9 @@ import com.umeng.onlineconfig.UmengOnlineConfigureListener;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Lincoln on 2015/11/19.
  * app
@@ -50,7 +53,6 @@ public class DiaryApp extends Application implements UmengOnlineConfigureListene
         Configs appConfigs = JsonUtil.get(jsonObject, Configs.class);
         dbManager.save(appConfigs);
         this.configs = appConfigs;
-
     }
 
     private void refreshConfigs() {

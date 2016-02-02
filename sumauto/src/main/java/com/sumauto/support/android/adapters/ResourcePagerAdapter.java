@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GuidePagerAdapter extends PagerAdapter
+public class ResourcePagerAdapter extends PagerAdapter
 {
 
     private int[] resIds;
 
     private Activity activity;
 
-    public GuidePagerAdapter(Activity activity, int[] resIds)
+    public ResourcePagerAdapter(Activity activity, int[] resIds)
     {
         this.resIds = resIds;
         this.activity = activity;
