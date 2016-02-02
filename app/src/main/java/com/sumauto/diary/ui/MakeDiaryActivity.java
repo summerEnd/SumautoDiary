@@ -29,8 +29,6 @@ public class MakeDiaryActivity extends BaseActivity {
         input_title = (TextInputLayout) findViewById(R.id.input_title);
         input_content = (TextInputLayout) findViewById(R.id.input_content);
         dbManager = new DBManager(this);
-        ActionBar supportActionBar = getSupportActionBar();
-
     }
 
     @Override

@@ -4,7 +4,9 @@
     >
 
     <data>
+
         <import type="com.sumauto.diary.utils.DateUtils"/>
+
         <variable
             name="diary"
             type="com.sumauto.diary.data.entity.Diary"/>
@@ -54,15 +56,16 @@
 
             <ImageView
                 android:id="@+id/iv_image"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
-                android:src="@drawable/test"/>
+                />
 
             <TextView
-                android:maxLines="5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="5"
                 android:text="@{diary.content}"
                 android:textColor="@color/black_3a"/>
         </LinearLayout>

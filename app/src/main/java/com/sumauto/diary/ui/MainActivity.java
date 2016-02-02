@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new DiaryListAdapter(this);
         recyclerView.setAdapter(adapter);
-        recyclerView.addItemDecoration(new PaddingItemDecoration(20, 20, 20, 20));
+        recyclerView.addItemDecoration(new PaddingItemDecoration(10, 10, 10, 10));
     }
 
     @Override
@@ -112,15 +112,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         if (id == R.id.nav_camara) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        }else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 
